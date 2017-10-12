@@ -1,1 +1,57 @@
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 2px;
+    color: #EEE;
+}
+#landing {
+    background: url("https://source.unsplash.com/collection/145103/computers-phones-and-tech") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: whitesmoke;
+    z-index: 1;
+    &:before {
+        content: '';
+        background: rgba(slategrey, 0.56);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+#meetups {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    .meetup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #454e57;
+        padding: 20px;
+        h2, h3 {
+            text-align: center;
+        }
+        &:nth-child(n+2) {
+            background: slategray;
+            color: #2e2e2e;
+        }
+    }
+}
 
