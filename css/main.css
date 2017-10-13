@@ -87,6 +87,6 @@ hr {
     padding: 20px; }
     #meetups .meetup h2, #meetups .meetup h3 {
       text-align: center; }
-    #meetups .meetup:nth-child(n+2) {
+    #meetups .meetup:nth-child(2n+4) {
       background: slategray;
-      color: #2e2e2e; }
+      color: #34313c; }

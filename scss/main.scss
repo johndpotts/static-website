@@ -48,9 +48,9 @@ hr {
         h2, h3 {
             text-align: center;
         }
-        &:nth-child(n+2) {
+        &:nth-child(2n+4) {
             background: slategray;
-            color: #2e2e2e;
+            color: #34313c;
         }
     }
 }
