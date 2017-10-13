@@ -15,7 +15,7 @@ gulp.task('serve', ['sass'], function () {
         server: "./",
     });
     gulp.watch("./scss/**/*.scss", ['sass']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch(["./*.html", "./js/*.js"]).on('change', browserSync.reload);
 });
 
 gulp.task('plumber', ['sass'], function () {
@@ -35,6 +35,11 @@ gulp.task('sass', function () {
             cascade: true
         }))
         .pipe(gulp.dest("./css"))
+        .pipe(browserSync.stream());
+});
+gulp.task('js', function () {
+    return gulp.src("./js/scripts")
+        .pipe(gulp.dest("./js/scripts"))
         .pipe(browserSync.stream());
 });
 
